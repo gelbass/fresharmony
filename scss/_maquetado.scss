@@ -1,0 +1,28 @@
+@use"_variables" as *;
+@use"_mixing" as *;
+* {
+    margin: 0;
+    padding: 0;
+    font-family:$fuentePrincipal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#ourMision{
+    @include container_img('../img/our_mission.jpg');  
+}
+
+
+#basicCleaning{
+    background-color: #E5FFED;
+    position: relative;
+  overflow: hidden;
+}
+#whyChooseUscontactUs{
+    @include container_img('../img/Bullet_points.jpg');  
+}
+#experience{
+    @include container_img('../img/Experience_the_joy.jpg');  
+}

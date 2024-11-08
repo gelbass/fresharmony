@@ -1,5 +1,36 @@
-@mixin container_img--services($url) {
+@mixin container_img($url) {
     background-image: url($url);
     background-size: cover;
     background-position: center;
+}
+
+@mixin button($colorBg,$colorTxt,$padding){
+    display: flex;
+    padding: $padding;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 40px;
+    border: 1px solid #FFF;
+    border: 1px solid color(display-p3 1 1 1);
+    background:$colorBg;
+    text-decoration: none;
+    color: $colorTxt !important;
+}
+
+@mixin text($font,$size,$style,$weight,$heigth,$color){
+    font-family: $font;
+    font-size: $size;
+    font-style: $style;
+    font-weight: $weight;
+    line-height: $heigth;
+    margin: 0px;
+    color: $color !important;
+}
+
+@mixin opacidad($position,$index){
+    position: $position;
+    width: 100%;
+    height: auto;
+    z-index: $index;
 }
