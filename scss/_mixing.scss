@@ -1,3 +1,5 @@
+@use 'sass:map';
+@use "_variables" as *;
 @mixin container_img($url) {
     background-image: url($url);
     background-size: cover;
@@ -29,8 +31,28 @@
 }
 
 @mixin opacidad($position,$index){
-    position: $position;
-    width: 100%;
-    height: auto;
+    position: absolute;
+    width: 100vw;  /* 100% del ancho de la ventana */
+    height: 100vh;  /* 100% de la altura de la ventana */
+    object-fit: cover;  /* Ajusta el SVG para cubrir todo el espacio sin deformarse */
+    object-position: center;  /* Centra el SVG dentro de la ventana */
     z-index: $index;
+}
+
+@mixin respond-to($breakpoint) {
+  @media (max-width: map.get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+@mixin respond-between($min, $max) {
+  $min-width: map.get($breakpoints, $min);
+  $max-width: map.get($breakpoints, $max);
+  
+  @if $min-width and $max-width {
+    @media (min-width: #{$min-width}) and (max-width: #{$max-width}) {
+      @content;
+    }
+  } @else {
+    @warn "Uno o ambos de los puntos de quiebre '#{$min}' o '#{$max}' no existen en el mapa.";
+  }
 }

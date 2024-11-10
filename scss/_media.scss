@@ -1,2 +1,537 @@
-@use"_variables" as *;
-@use"_mixing" as *;
+@use "_variables" as *;
+@use "_mixing" as *;
+
+
+
+.card--services--container {
+
+}
+
+.card--services--img {
+
+}
+
+.card--services--text {
+
+}
+
+.card--services--title {
+
+}
+
+.carousel-button {
+
+}
+
+.carousel-buttons {
+    @include respond-between("tablet-medium", "tablet-large") {
+        width: 100%;
+    }
+    @include respond-between("tablet-small","tablet-medium") {
+        width: 100%;
+     }
+}
+
+.carousel-container {
+
+    @include respond-between("tablet-large", "laptop-small") {
+        width: 76%;
+    }
+    @include respond-between("tablet-medium", "tablet-large") {
+        width: 93%;
+    }
+    @include respond-between("tablet-small","tablet-medium") {
+        width: 85%;
+     }
+
+}
+.card--services {
+    @include respond-between("tablet-small","tablet-medium") {
+        margin-left: 20px;
+        margin-right: 20px;
+     }
+}
+.carousel-wrapper {
+
+}
+
+.container__home {
+    @include respond-between("tablet-medium", "tablet-large") {
+        padding-left: 50px !important;
+    }
+    @include respond-between("tablet-small","tablet-medium") {
+        padding-left: 20px !important;
+    }
+}
+
+.container__MainServices {
+    @include respond-between("tablet-large", "laptop-small") {
+        padding: 0px 55px !important;
+    }
+    @include respond-between("tablet-medium", "tablet-large") {
+        padding: 0px 25px !important;
+    }
+    @include respond-between("tablet-small","tablet-medium") {
+        padding: 0px 20px !important;
+    }
+}
+
+.container__MainServices--Text {
+
+}
+
+.container__menu {
+
+}
+
+.container__menu--bar {
+
+}
+
+.container__menu--btn {
+
+}
+
+.container__menu--item {
+
+}
+
+.container__menu--items {
+
+}
+
+.container__ourMision {
+    @include respond-between("tablet-medium", "tablet-large") {
+        padding-left: 50px !important;
+    }
+    @include respond-between("tablet-small","tablet-medium") {
+        padding-left: 20px !important;
+    }
+}
+
+.container__ourMision--Text {
+
+}
+
+.container__testimonials {
+
+}
+
+.container__testimonials--Title {
+    @include respond-between("tablet-large", "laptop-small") {
+       font-size: 60px;
+    }
+    @include respond-between("tablet-medium","tablet-large") {
+        font-size: 50px;
+     }
+    @include respond-between("tablet-small","tablet-medium") {
+       font-size: 40px;
+
+    }
+}
+.carousel--text{
+    @include respond-between("tablet-large", "laptop-small") {
+        font-size: 45px;
+    }
+    @include respond-between("tablet-medium","tablet-large") {
+        font-size: 40px;
+     }
+    @include respond-between("tablet-small","tablet-medium") {
+       font-size: 35px;
+    }
+}
+.container__whyChooseUs{
+    @include respond-between("tablet-medium", "tablet-large") {
+        gap: 50px;
+    } 
+    @include respond-between("tablet-small","tablet-medium") {
+        gap: 40px;
+     }    
+}
+.container__whyChooseUs--texts{
+    
+}
+.container__cards{
+
+    @include respond-between("tablet-large", "laptop-small") {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center; 
+        gap: 40px;
+    }
+    @include respond-between("tablet-medium", "tablet-large") {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center; 
+        gap: 35px;
+    }
+    @include respond-between("tablet-small","tablet-medium") {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center; 
+        gap: 35px;
+    }
+
+
+}
+.container__cards--card{
+    @include respond-between("tablet-large", "laptop-small") {
+        width: 280px;
+        height: 220px;
+        h4{
+            font-size: 25px;
+        }
+        p{
+            font-size: 18px;
+        }
+    }
+    @include respond-between("tablet-medium", "tablet-large") {
+        width: 260px;
+        height: 200px;
+        h4{
+            font-size: 20px;
+        }
+        p{
+            font-size: 15px;
+        }
+    }
+    @include respond-between("tablet-small","tablet-medium") {
+        width: 240px;
+        height: 180px;
+        h4{
+            font-size: 20px;
+        }
+        p{
+            font-size: 15px;
+        }
+    }
+
+
+}
+.imgMenu {
+
+}
+.container__experience{
+  
+}   
+.container__experience--texts {
+    @include respond-between("tablet-small","tablet-medium") {
+        gap: 10px;
+    }
+  
+}
+.container__contacUs{
+
+    @include respond-between("tablet-medium", "tablet-large") {
+        gap: 60px;
+        padding-left: 50px !important;
+    }
+    @include respond-between("tablet-small","tablet-medium") {
+        gap: 40px;
+        padding-left: 30px !important;
+    }
+}
+.container__contacUs--elements{
+    
+}
+.container__contacUs--img{
+    @include respond-between("tablet-medium", "tablet-large") {
+        width: 100%;
+    }
+    @include respond-between("tablet-small","tablet-medium") {
+        width: 100%;
+    }
+}
+.container__contacUs--text{
+    @include respond-between("laptop-small", "laptop-medium"){
+        font-size: 60px
+    }
+    @include respond-between("tablet-large", "laptop-small") {
+        font-size: 50px
+    }
+    @include respond-between("tablet-medium", "tablet-large") {
+        font-size: 50px;
+    }
+    @include respond-between("tablet-small","tablet-medium") {
+        font-size: 45px;
+    }
+}
+.contactUs__form{
+    @include respond-between("tablet-medium", "tablet-large") {
+        width: 55%;
+        padding: 0px;
+        margin: 0px;
+    }
+    @include respond-between("tablet-small","tablet-medium") {
+        width: 55%;
+        padding: 0px;
+        margin: 0px;
+    }
+    @include respond-between("tablet-small","tablet-medium") {
+        width: 55%;
+        padding: 0px;
+        margin: 0px;
+     }
+}
+.form-container{
+    @include respond-between("tablet-small","tablet-medium") {
+        padding-bottom: 0px;
+    }
+}
+.row_form{
+    @include respond-between("tablet-small","tablet-medium") {
+        flex-direction: column;
+    }
+}
+.btn-submit{
+    @include respond-between("tablet-small","tablet-medium") {
+        padding: 5px 65px;
+        font-size: 15px;
+    }
+}
+.container__footer{
+    
+}
+.container__footer--img{
+    
+}
+.container__footer--p{
+    @include respond-between("tablet-large", "laptop-small") {
+        font-size: 15px
+    }
+    @include respond-between("tablet-medium", "tablet-large") {
+       font-size: 10px;
+    }
+    @include respond-between("tablet-small","tablet-medium") {
+        font-size: 10px;
+    }
+}
+.container__footer--socialMedia{
+    
+}
+.socialMedia{
+    @include respond-between("tablet-large", "laptop-small") {
+        font-size: 15px
+    }
+    @include respond-between("tablet-medium", "tablet-large") {
+        font-size: 10px;
+     }
+     @include respond-between("tablet-small","tablet-medium") {
+        font-size: 10px;
+    }
+    h4{
+        @include respond-between("tablet-large", "laptop-small") {
+            font-size: 15px
+        }
+        @include respond-between("tablet-medium", "tablet-large") {
+            font-size: 10px;
+         }
+         @include respond-between("tablet-small","tablet-medium") {
+            font-size: 10px;
+        }
+    }
+}
+.opacidad--experience {
+
+}
+
+.opacidad--home {
+
+}
+
+.opacidad--ourMision {
+
+}
+
+
+.title--OurMision {
+    @include respond-between("laptop-small", "laptop-medium"){
+        font-size: 60px
+    }
+    @include respond-between("tablet-large", "laptop-small") {
+        font-size: 50px
+    }
+    @include respond-between("tablet-medium", "tablet-large") {
+        font-size: 45px
+    }
+}
+
+.title--h1 {
+    @include respond-between("tablet-large", "laptop-small") {
+        font-size: 30px
+    }
+    @include respond-between("tablet-medium", "tablet-large") {
+        font-size: 26px
+    }
+    @include respond-between("tablet-small","tablet-medium") {
+        font-size: 27px;
+    }
+}
+.title--Principal {
+    @include respond-between("laptop-small", "laptop-medium"){
+        font-size: 60px
+    }
+    @include respond-between("tablet-large", "laptop-small") {
+        font-size: 50px
+    }
+    @include respond-between("tablet-medium", "tablet-large") {
+        font-size: 40px;
+    }
+    @include respond-between("tablet-small","tablet-medium") {
+        font-size: 37px;
+     }
+}
+
+.title--h3 {
+    @include respond-between("tablet-large", "laptop-small") {
+        font-size: 30px
+    }
+    @include respond-between("tablet-medium", "tablet-large") {
+        font-size: 26px
+    }
+    @include respond-between("tablet-small","tablet-medium") {
+        font-size: 24px;
+    }
+}
+
+.title--h4 {
+    @include respond-between("tablet-large", "laptop-small") {
+        font-size: 25px
+    }
+    @include respond-between("tablet-medium", "tablet-large") {
+        font-size: 25px
+    }
+    @include respond-between("tablet-small","tablet-medium") {
+        font-size: 22px;
+    }
+}
+.text--experience{
+    @include respond-between("laptop-small", "laptop-medium"){
+        font-size: 38px;
+    }
+    @include respond-between("tablet-large", "laptop-small") {
+        font-size: 30px
+    }
+    @include respond-between("tablet-medium", "tablet-large") {
+        font-size: 26px
+    }
+    @include respond-between("tablet-small","tablet-medium") {
+        font-size: 24px;
+    }
+}
+.title--basicCleaning{
+    @include respond-between("laptop-small", "laptop-medium"){
+        font-size: 60px
+    }
+    @include respond-between("tablet-large", "laptop-small") {
+        font-size: 50px
+    }
+    @include respond-between("tablet-medium", "tablet-large") {
+        font-size: 40px
+    }
+    @include respond-between("tablet-small","tablet-medium") {
+        font-size: 35px;
+    }
+}
+.title--basicCleaning--h3{
+    @include respond-between("laptop-small", "laptop-medium"){
+        font-size: 40px
+    }
+    @include respond-between("tablet-large", "laptop-small") {
+        font-size: 30px
+    }
+    @include respond-between("tablet-medium", "tablet-large") {
+        font-size: 26px
+    }
+    @include respond-between("tablet-small","tablet-medium") {
+        font-size: 20px;
+    }
+    
+}
+.title--whyChooseUs{
+    @include respond-between("laptop-small", "laptop-medium"){
+        font-size: 60px
+    }
+    @include respond-between("tablet-large", "laptop-small") {
+        font-size: 50px
+    }
+    @include respond-between("tablet-medium", "tablet-large") {
+        font-size: 40px
+    }
+    @include respond-between("tablet-small","tablet-medium") {
+        font-size: 35px;
+    }
+}
+.title--whyChooseUs--h3{
+    @include respond-between("tablet-large", "laptop-small") {
+        font-size: 20px
+    }
+    @include respond-between("tablet-medium", "tablet-large") {
+        font-size: 15px;
+        
+    }
+     @include respond-between("tablet-small","tablet-medium") {
+        font-size: 15px;
+    }
+}
+
+.title--mainServices{
+    @include respond-between("laptop-small", "laptop-medium"){
+        font-size: 60px
+    }
+    @include respond-between("tablet-large", "laptop-small") {
+        font-size: 50px
+    }
+    @include respond-between("tablet-medium", "tablet-large") {
+        font-size: 48px
+    }
+    @include respond-between("tablet-small","tablet-medium") {
+        font-size: 45px;
+    }
+}
+
+.container__basicCleaning{
+    @include respond-between("tablet-large", "laptop-small") {
+       padding: 0px !important;
+    }
+    @include respond-between("tablet-medium", "tablet-large") {
+       padding: 0px !important;
+     }
+     @include respond-between("tablet-small","tablet-medium") {
+        padding: 0% !important;
+    }
+}
+.container__basicCleaning--text{  
+    @include respond-between("tablet-small","tablet-medium") {
+    
+        position: absolute;
+        right: 0px;
+        margin-top: 34%;
+     }  
+}
+.basicCleaning--img{
+    @include respond-between("tablet-large", "laptop-small") {
+        width: 60%;
+    }
+    @include respond-between("tablet-medium", "tablet-large") {
+       width: 65%;;
+     }
+     
+}
+.basicCleaning--svg{
+    @include respond-between("tablet-large", "laptop-small") {
+        //width: 60%;
+       bottom: 0px;
+    }
+    @include respond-between("tablet-medium", "tablet-large") {
+       width: 121%;
+       bottom: 0px;
+     }
+     @include respond-between("tablet-small","tablet-medium") {
+        width: 121%;
+       bottom: 0px;
+     }
+}
+.container_logo {
+
+}

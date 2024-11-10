@@ -1,4 +1,10 @@
 @charset "UTF-8";
+/*
+falta agregar apartir de aqui
+@include respond-between("phone-large","tablet-small") {
+
+}
+*/
 .container__menu {
   width: 1728px;
   height: 120px;
@@ -84,10 +90,13 @@
   overflow: hidden;
 }
 .video-background video {
-  position: absolute;
-  width: 100%;
-  height: auto;
   z-index: -2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw; /* 100% del ancho de la ventana */
+  height: 100vh; /* 100% de la altura de la ventana */
+  object-fit: fill;
 }
 
 .container__home {
@@ -169,24 +178,29 @@
 
 .opacidad--home {
   position: absolute;
-  width: 100%;
-  height: auto;
+  width: 100vw; /* 100% del ancho de la ventana */
+  height: 100vh; /* 100% de la altura de la ventana */
+  object-fit: cover; /* Ajusta el SVG para cubrir todo el espacio sin deformarse */
+  object-position: center; /* Centra el SVG dentro de la ventana */
   z-index: -1;
 }
 
 .opacidad--ourMision {
   position: absolute;
-  width: 100%;
-  height: auto;
+  width: 100vw; /* 100% del ancho de la ventana */
+  height: 100vh; /* 100% de la altura de la ventana */
+  object-fit: cover; /* Ajusta el SVG para cubrir todo el espacio sin deformarse */
+  object-position: center; /* Centra el SVG dentro de la ventana */
   z-index: 0;
 }
 
 .opacidad--experience {
   position: absolute;
-  width: 100%;
-  height: auto;
+  width: 100vw; /* 100% del ancho de la ventana */
+  height: 100vh; /* 100% de la altura de la ventana */
+  object-fit: cover; /* Ajusta el SVG para cubrir todo el espacio sin deformarse */
+  object-position: center; /* Centra el SVG dentro de la ventana */
   z-index: 0;
-  height: 100vh !important;
 }
 
 .container__ourMision {
@@ -212,7 +226,7 @@
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  padding: 60px 90px !important;
+  padding: 0px 90px !important;
   background: linear-gradient(180deg, #000 0%, #003202 55%, #fafffc 45%);
 }
 
@@ -224,7 +238,7 @@
   gap: 20px;
 }
 
-.container__MainServices--Title {
+.title--mainServices {
   font-family: Rufina;
   font-size: 76px;
   font-style: normal;
@@ -389,9 +403,8 @@
   display: flex;
   flex-direction: row;
   height: 100vh;
-  padding: 20px 10px !important;
   align-items: center;
-  align-content: space-around;
+  align-content: flex-end;
   flex-wrap: wrap;
 }
 
@@ -416,6 +429,26 @@
 .title--basicCleaning--h3 {
   font-family: Montserrat;
   font-size: 45px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0px;
+  color: #000 !important;
+}
+
+.title--whyChooseUs {
+  font-family: Rufina;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0px;
+  color: #000 !important;
+}
+
+.title--whyChooseUs--h3 {
+  font-family: Montserrat;
+  font-size: 30px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -449,6 +482,7 @@
   align-items: center;
   gap: 90px;
   text-align: center;
+  align-content: center;
 }
 
 .container__cards--card {
@@ -498,7 +532,7 @@
   gap: 40px;
 }
 
-.container__experience-- {
+.container__experience--texts {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -506,7 +540,7 @@
   gap: 40px;
 }
 
-.text-B {
+.text--experience {
   font-family: Montserrat;
   font-size: 49px;
   font-style: normal;
@@ -565,7 +599,7 @@
   justify-content: center;
   align-items: flex-start;
   border-radius: 50px 50px 0px 0px;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   border: 1px solid color(display-p3 1 1 1);
   background: rgba(255, 255, 255, 0.1);
   background: color(display-p3 1 1 1 / 0.1);
@@ -615,7 +649,7 @@
   align-items: flex-end;
   gap: 50px;
   border-radius: 0px 0px 50px 50px;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   border: 1px solid color(display-p3 1 1 1);
   background: rgba(255, 255, 255, 0.5);
   background: color(display-p3 1 1 1 / 0.5);
@@ -718,9 +752,9 @@ html {
 }
 
 #basicCleaning {
-  background-color: #E5FFED;
-  position: relative;
-  overflow: hidden;
+  background-image: url("../img/basic_cleaning.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 #whyChooseUscontactUs {
@@ -733,6 +767,581 @@ html {
   background-image: url("../img/Experience_the_joy.jpg");
   background-size: cover;
   background-position: center;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .carousel-buttons {
+    width: 100%;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .carousel-buttons {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .carousel-container {
+    width: 76%;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .carousel-container {
+    width: 93%;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .carousel-container {
+    width: 85%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .card--services {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .container__home {
+    padding-left: 50px !important;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .container__home {
+    padding-left: 20px !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .container__MainServices {
+    padding: 0px 55px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .container__MainServices {
+    padding: 0px 25px !important;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .container__MainServices {
+    padding: 0px 20px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .container__ourMision {
+    padding-left: 50px !important;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .container__ourMision {
+    padding-left: 20px !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .container__testimonials--Title {
+    font-size: 60px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .container__testimonials--Title {
+    font-size: 50px;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .container__testimonials--Title {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .carousel--text {
+    font-size: 45px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .carousel--text {
+    font-size: 40px;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .carousel--text {
+    font-size: 35px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .container__whyChooseUs {
+    gap: 50px;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .container__whyChooseUs {
+    gap: 40px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .container__cards {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .container__cards {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 35px;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .container__cards {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 35px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .container__cards--card {
+    width: 280px;
+    height: 220px;
+  }
+  .container__cards--card h4 {
+    font-size: 25px;
+  }
+  .container__cards--card p {
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .container__cards--card {
+    width: 260px;
+    height: 200px;
+  }
+  .container__cards--card h4 {
+    font-size: 20px;
+  }
+  .container__cards--card p {
+    font-size: 15px;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .container__cards--card {
+    width: 240px;
+    height: 180px;
+  }
+  .container__cards--card h4 {
+    font-size: 20px;
+  }
+  .container__cards--card p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .container__experience--texts {
+    gap: 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .container__contacUs {
+    gap: 60px;
+    padding-left: 50px !important;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .container__contacUs {
+    gap: 40px;
+    padding-left: 30px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .container__contacUs--img {
+    width: 100%;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .container__contacUs--img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1366px) {
+  .container__contacUs--text {
+    font-size: 60px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .container__contacUs--text {
+    font-size: 50px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .container__contacUs--text {
+    font-size: 50px;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .container__contacUs--text {
+    font-size: 45px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .contactUs__form {
+    width: 55%;
+    padding: 0px;
+    margin: 0px;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .contactUs__form {
+    width: 55%;
+    padding: 0px;
+    margin: 0px;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .contactUs__form {
+    width: 55%;
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .form-container {
+    padding-bottom: 0px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .row_form {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .btn-submit {
+    padding: 5px 65px;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .container__footer--p {
+    font-size: 15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .container__footer--p {
+    font-size: 10px;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .container__footer--p {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .socialMedia {
+    font-size: 15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .socialMedia {
+    font-size: 10px;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .socialMedia {
+    font-size: 10px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .socialMedia h4 {
+    font-size: 15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .socialMedia h4 {
+    font-size: 10px;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .socialMedia h4 {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1366px) {
+  .title--OurMision {
+    font-size: 60px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .title--OurMision {
+    font-size: 50px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .title--OurMision {
+    font-size: 45px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .title--h1 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .title--h1 {
+    font-size: 26px;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .title--h1 {
+    font-size: 27px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1366px) {
+  .title--Principal {
+    font-size: 60px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .title--Principal {
+    font-size: 50px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .title--Principal {
+    font-size: 40px;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .title--Principal {
+    font-size: 37px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .title--h3 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .title--h3 {
+    font-size: 26px;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .title--h3 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .title--h4 {
+    font-size: 25px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .title--h4 {
+    font-size: 25px;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .title--h4 {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1366px) {
+  .text--experience {
+    font-size: 38px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .text--experience {
+    font-size: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .text--experience {
+    font-size: 26px;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .text--experience {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1366px) {
+  .title--basicCleaning {
+    font-size: 60px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .title--basicCleaning {
+    font-size: 50px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .title--basicCleaning {
+    font-size: 40px;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .title--basicCleaning {
+    font-size: 35px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1366px) {
+  .title--basicCleaning--h3 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .title--basicCleaning--h3 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .title--basicCleaning--h3 {
+    font-size: 26px;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .title--basicCleaning--h3 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1366px) {
+  .title--whyChooseUs {
+    font-size: 60px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .title--whyChooseUs {
+    font-size: 50px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .title--whyChooseUs {
+    font-size: 40px;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .title--whyChooseUs {
+    font-size: 35px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .title--whyChooseUs--h3 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .title--whyChooseUs--h3 {
+    font-size: 15px;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .title--whyChooseUs--h3 {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1366px) {
+  .title--mainServices {
+    font-size: 60px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .title--mainServices {
+    font-size: 50px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .title--mainServices {
+    font-size: 48px;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .title--mainServices {
+    font-size: 45px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .container__basicCleaning {
+    padding: 0px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .container__basicCleaning {
+    padding: 0px !important;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .container__basicCleaning {
+    padding: 0% !important;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .container__basicCleaning--text {
+    position: absolute;
+    right: 0px;
+    margin-top: 34%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .basicCleaning--img {
+    width: 60%;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .basicCleaning--img {
+    width: 65%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .basicCleaning--svg {
+    bottom: 0px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .basicCleaning--svg {
+    width: 121%;
+    bottom: 0px;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .basicCleaning--svg {
+    width: 121%;
+    bottom: 0px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

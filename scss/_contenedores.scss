@@ -64,10 +64,16 @@
   height: 100vh;
   overflow: hidden;
   video {
-    position: absolute;
-    width: 100%;
-    height: auto;
+    // position: absolute;
+    // width: 100%;
+    // height: auto;
     z-index: -2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* 100% del ancho de la ventana */
+    height: 100vh; /* 100% de la altura de la ventana */
+    object-fit: fill; 
   }
 }
 
@@ -99,6 +105,7 @@
 
 .title--OurMision {
   @include text(Rufina, 70px, normal, 400, normal, $colorTextB);
+  
 }
 
 .btn--Home {
@@ -109,10 +116,11 @@
 }
 .opacidad--ourMision {
   @include opacidad(absolute, 0);
+  // left: -17px;
 }
 .opacidad--experience {
   @include opacidad(absolute, 0);
-  height: 100vh !important;
+  // left: -17px;
 }
 
 .container__ourMision {
@@ -137,8 +145,8 @@
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  padding: 60px 90px !important;
-  background: linear-gradient(180deg, #000 0%, #003202 55%, #fafffc 45%);
+  padding: 0px 90px !important;
+  background: linear-gradient(180deg, $colorTextN 0%, #003202 55%, #fafffc 45%);
 }
 .container__MainServices--Text {
   display: flex;
@@ -147,7 +155,7 @@
   align-content: center;
   gap: 20px;
 }
-.container__MainServices--Title {
+.title--mainServices {
   @include text(Rufina, 76px, normal, 400, normal, $colorTextB);
 }
 .card--services {
@@ -161,7 +169,7 @@
   gap: 22px;
   flex-shrink: 0;
   border-radius: 22px;
-  background: #fff;
+  background: $colorTextB;
   box-shadow: 0px 4.45px 15px 0px color(display-p3 0.0947 0.3972 0.0947 / 0.3);
   box-sizing: border-box;
   filter: grayscale(100%);
@@ -288,9 +296,9 @@
   display: flex;
   flex-direction: row;
   height: 100vh;
-  padding: 20px 10px !important;
+  // padding: 20px 10px !important;
   align-items: center;
-  align-content: space-around;
+  align-content: flex-end;
   flex-wrap: wrap;
 }
 .container__basicCleaning--text {
@@ -305,6 +313,12 @@
 }
 .title--basicCleaning--h3 {
   @include text(Montserrat, 45px, normal, 400, normal, $colorTextN);
+}
+.title--whyChooseUs{
+  @include text(Rufina, 70px, normal, 400, normal, $colorTextN);
+}
+.title--whyChooseUs--h3{
+  @include text(Montserrat, 30px, normal, 400, normal, $colorTextN);
 }
 .basicCleaning--img {
   width: 50%;
@@ -330,6 +344,7 @@
   align-items: center;
   gap: 90px;
   text-align: center;
+  align-content: center;
 }
 .container__cards--card {
   display: flex;
@@ -341,7 +356,7 @@
   align-items: center;
   gap: 22.249px;
   border-radius: 22.249px;
-  border: 2px solid #fff;
+  border: 2px solid $colorTextB;
   border: 2px solid color(display-p3 1 1 1);
   background: rgba(255, 255, 255, 0.1);
   background: color(display-p3 1 1 1 / 0.1);
@@ -365,14 +380,14 @@
   justify-content: center;
   gap: 40px;
 }
-.container__experience-- {
+.container__experience--texts {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 40px;
 }
-.text-B {
+.text--experience {
   @include text(Montserrat, 49px, normal, 400, normal, $colorTextB);
 }
 
@@ -383,7 +398,7 @@
   justify-content: center;
   gap: 100px;
   height: 100vh;
-  background: linear-gradient(180deg, #000 0%, #003202 100%);
+  background: linear-gradient(180deg, $colorTextN 0%, #003202 100%);
   background: linear-gradient(
     180deg,
     color(display-p3 0 0 0) 0%,
@@ -418,7 +433,7 @@ flex-direction: column;
 justify-content: center;
 align-items: flex-start;
   border-radius: 50px 50px 0px 0px;
-  border: 1px solid #FFF;
+  border: 1px solid $colorTextB;
   border: 1px solid color(display-p3 1 1 1);
   background: rgba(255, 255, 255, 0.10);
   background: color(display-p3 1 1 1 / 0.10);
@@ -428,7 +443,7 @@ align-items: flex-start;
 }
 .form-control, .form-select {
   background-color: #444;
-  color: #fff;
+  color: $colorTextB;
   border: none;
   border-radius: 5px;
 }
@@ -436,8 +451,8 @@ align-items: flex-start;
   color: #aaa;
 }
 .btn-submit {
- @include button(#E2FFEC,#000,10px 90px);
- @include text(Montserrat,20px,normal,400,normal,#000);
+ @include button($colorSegundario,$colorTextN,10px 90px);
+ @include text(Montserrat,20px,normal,400,normal,$colorTextN);
 }
 
 .form-footer{
@@ -448,7 +463,7 @@ justify-content: center;
 align-items: flex-end;
 gap: 50px;
   border-radius: 0px 0px 50px 50px;
-border: 1px solid #FFF;
+border: 1px solid $colorTextB;
 border: 1px solid color(display-p3 1 1 1);
 background: rgba(255, 255, 255, 0.50);
 background: color(display-p3 1 1 1 / 0.50);
@@ -464,7 +479,7 @@ background: color(display-p3 1 1 1 / 0.50);
   flex-direction: column;
   align-items: center;
   background: linear-gradient(180deg, #003202 5.27%, #004C00 50.74%, #006B00 96.21%, #006F00 100%);
-background: linear-gradient(180deg, color(display-p3 0.0039 0.1922 0.0353) 5.27%, color(display-p3 0 0.2902 0.0176) 50.74%, color(display-p3 0 0.4118 0) 96.21%, color(display-p3 0 0.4275 0) 100%);
+  background: linear-gradient(180deg, color(display-p3 0.0039 0.1922 0.0353) 5.27%, color(display-p3 0 0.2902 0.0176) 50.74%, color(display-p3 0 0.4118 0) 96.21%, color(display-p3 0 0.4275 0) 100%);
   padding: 10px;
 
   text-align: center;
@@ -480,7 +495,7 @@ background: linear-gradient(180deg, color(display-p3 0.0039 0.1922 0.0353) 5.27%
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  @include text(Montserrat,20px,normal,400,normal,#fff);
+  @include text(Montserrat,20px,normal,400,normal,$colorTextB);
   p{
     margin: 0px;
   }
@@ -493,7 +508,7 @@ background: linear-gradient(180deg, color(display-p3 0.0039 0.1922 0.0353) 5.27%
   gap: 21px;
 }
 .socialMedia{
-  @include text(Montserrat,20px,normal,400,normal,#fff);
+  @include text(Montserrat,20px,normal,400,normal,$colorTextB);
   text-align: center;
   display: flex;
     gap: 15px;
@@ -513,10 +528,10 @@ background: linear-gradient(180deg, color(display-p3 0.0039 0.1922 0.0353) 5.27%
 
   }
   &:hover {
-    color: #000;
+    color: $colorTextN;
     text-decoration: none;
     svg{
-      fill: #000;
+      fill: $colorTextN;
     }
 
   }
