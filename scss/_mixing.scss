@@ -32,7 +32,7 @@
 
 @mixin opacidad($position,$index){
     position: absolute;
-    width: 100vw;  /* 100% del ancho de la ventana */
+    width: 100%;  /* 100% del ancho de la ventana */
     height: 100vh;  /* 100% de la altura de la ventana */
     object-fit: cover;  /* Ajusta el SVG para cubrir todo el espacio sin deformarse */
     object-position: center;  /* Centra el SVG dentro de la ventana */

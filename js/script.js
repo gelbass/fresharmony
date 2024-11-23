@@ -47,52 +47,52 @@ window.onload = function() {
 };
 
 
+
 // Variables para manejar el carrusel
 const wrapper = document.querySelector('.carousel-wrapper');
 const cards = document.querySelectorAll('.card--services');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 
-let currentIndex = 0; // Índice inicial de la tarjeta visible
+let currentIndex = 0; // Índice inicial
 let autoSlideInterval; // Intervalo de autoavance
+
+// Función para calcular el ancho de una tarjeta
+function getCardWidth() {
+    const width = window.innerWidth;
+    if (width <= 414) return cards[0].offsetWidth + 15; // Margen pequeño para vistas móviles
+    return cards[0].offsetWidth + 60; // Margen estándar para pantallas más grandes
+}
 
 // Función para actualizar la posición del carrusel
 function updateCarousel() {
-    // Verifica si el ancho de la ventana es menor a 768px
-    const isMobileView = window.innerWidth < 768;
-    const cardWidth = cards[0].offsetWidth + (isMobileView ? 20 : 60); // Margen diferente en móvil y escritorio
+    const cardWidth = getCardWidth();
     wrapper.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
 }
 
-// Función para avanzar una tarjeta a la vez
+// Función para avanzar el carrusel
 function nextCard() {
-    const isMobileView = window.innerWidth < 768;
-    const visibleCards = isMobileView ? 1 : 3; // Mostrar solo una tarjeta en móvil
-
-    if (currentIndex < cards.length - visibleCards) {  // Asegura que no se pase de la última tarjeta visible
+    if (currentIndex < cards.length - 1) {
         currentIndex++;
     } else {
-        currentIndex = 0;  // Vuelve al inicio (ciclo infinito)
+        currentIndex = 0; // Volver al inicio
     }
     updateCarousel();
 }
 
-// Función para retroceder una tarjeta a la vez
+// Función para retroceder el carrusel
 function prevCard() {
-    const isMobileView = window.innerWidth < 768;
-    const visibleCards = isMobileView ? 1 : 3; // Mostrar solo una tarjeta en móvil
-
     if (currentIndex > 0) {
         currentIndex--;
     } else {
-        currentIndex = cards.length - visibleCards;  // Vuelve al final si está en el inicio
+        currentIndex = cards.length - 1; // Volver al final
     }
     updateCarousel();
 }
 
-// Función para autoavance del carrusel
+// Función para autoavance
 function startAutoSlide() {
-    autoSlideInterval = setInterval(nextCard, 6000); // Avanza cada 6 segundos
+    autoSlideInterval = setInterval(nextCard, 6000);
 }
 
 // Función para detener el autoavance
@@ -100,27 +100,16 @@ function stopAutoSlide() {
     clearInterval(autoSlideInterval);
 }
 
-// Eventos para botones de avance y retroceso
+// Eventos
 nextBtn.addEventListener('click', nextCard);
 prevBtn.addEventListener('click', prevCard);
-
-// Iniciar autoavance cuando la página carga
-startAutoSlide();
-
-// Detener autoavance al hacer hover en el carrusel y reiniciar al salir
 wrapper.addEventListener('mouseenter', stopAutoSlide);
 wrapper.addEventListener('mouseleave', startAutoSlide);
-
-// Función para detectar clics en las tarjetas y actualizar el índice
-cards.forEach((card, index) => {
-    card.addEventListener('click', () => {
-        currentIndex = index;
-        updateCarousel();
-    });
+window.addEventListener('resize', () => {
+    currentIndex = 0; // Reiniciar posición para evitar cortes
+    updateCarousel();
 });
-
-// Actualizar el carrusel al cambiar el tamaño de la ventana
-window.addEventListener('resize', updateCarousel);
 
 // Inicialización
 updateCarousel();
+startAutoSlide();

@@ -3,37 +3,38 @@
 
 
 
-.card--services--container {
+.card--services {
+    @include respond-between("tablet-small", "desktop-small") {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
 
-}
-
-.card--services--img {
-
-}
-
-.card--services--text {
-
-}
-
-.card--services--title {
-
-}
-
-.carousel-button {
-
+    // @include respond-between("tablet-large", "laptop-small") {
+    //     margin-left: 30px;
+    //     margin-right: 30px;
+    // }
+    // @include respond-between("tablet-medium", "tablet-large") {
+    //     margin-left: 30px;
+    //     margin-right: 30px;
+    // }
+    // @include respond-between("tablet-small","tablet-medium") {
+    //     margin-left: 30px;
+    //     margin-right: 30px;
+    //  }
 }
 
 .carousel-buttons {
-    @include respond-between("tablet-medium", "tablet-large") {
+    @include respond-between("phone-small", "tablet-large") {
         width: 100%;
     }
-    @include respond-between("tablet-small","tablet-medium") {
-        width: 100%;
-     }
+
 }
 
 .carousel-container {
 
+    @include respond-between("laptop-medium","desktop-small") {
+        width: 80%;
+    }
     @include respond-between("tablet-large", "laptop-small") {
         width: 76%;
     }
@@ -43,6 +44,9 @@
     @include respond-between("tablet-small","tablet-medium") {
         width: 85%;
      }
+     @include respond-between("phone-small","tablet-small") {
+        width: 95%;
+     }
 
 }
 .card--services {
@@ -51,9 +55,7 @@
         margin-right: 20px;
      }
 }
-.carousel-wrapper {
 
-}
 
 .container__home {
     @include respond-between("tablet-medium", "tablet-large") {
@@ -61,6 +63,15 @@
     }
     @include respond-between("tablet-small","tablet-medium") {
         padding-left: 20px !important;
+    }
+    @include respond-between("phone-small","tablet-small") {
+        padding-left: 10px !important;
+        align-items: center !important;
+        div{
+            text-align: center;
+            align-items: center !important;
+        }
+
     }
 }
 
@@ -74,30 +85,10 @@
     @include respond-between("tablet-small","tablet-medium") {
         padding: 0px 20px !important;
     }
-}
 
-.container__MainServices--Text {
-
-}
-
-.container__menu {
-
-}
-
-.container__menu--bar {
-
-}
-
-.container__menu--btn {
-
-}
-
-.container__menu--item {
-
-}
-
-.container__menu--items {
-
+    @include respond-between("phone-small","tablet-small") {
+        padding: 0px 30px !important
+    }
 }
 
 .container__ourMision {
@@ -107,16 +98,16 @@
     @include respond-between("tablet-small","tablet-medium") {
         padding-left: 20px !important;
     }
+    @include respond-between("phone-small","tablet-small") {
+        padding: 10px !important;
+        align-items: center;
+    }
 }
-
-.container__ourMision--Text {
-
+.opacidad--ourMision {
+    @include respond-between("tablet-small","tablet-medium") {
+        padding-left: 20px !important;
+    }
 }
-
-.container__testimonials {
-
-}
-
 .container__testimonials--Title {
     @include respond-between("tablet-large", "laptop-small") {
        font-size: 60px;
@@ -128,6 +119,9 @@
        font-size: 40px;
 
     }
+    @include respond-between("phone-small","tablet-small") {
+        font-size: 35px;
+     }
 }
 .carousel--text{
     @include respond-between("tablet-large", "laptop-small") {
@@ -139,18 +133,22 @@
     @include respond-between("tablet-small","tablet-medium") {
        font-size: 35px;
     }
+    @include respond-between("phone-small","tablet-small") {
+       font-size: 30px;
+     }
 }
 .container__whyChooseUs{
     @include respond-between("tablet-medium", "tablet-large") {
         gap: 50px;
     } 
-    @include respond-between("tablet-small","tablet-medium") {
+    @include respond-between("phone-large","tablet-medium") {
         gap: 40px;
+     } 
+     @include respond-between("phone-small","phone-large") {
+        gap: 25px;
      }    
 }
-.container__whyChooseUs--texts{
-    
-}
+
 .container__cards{
 
     @include respond-between("tablet-large", "laptop-small") {
@@ -159,17 +157,18 @@
         justify-content: center; 
         gap: 40px;
     }
-    @include respond-between("tablet-medium", "tablet-large") {
+    @include respond-between("tablet-small", "tablet-large") {
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: center; 
         gap: 35px;
     }
-    @include respond-between("tablet-small","tablet-medium") {
+
+    @include respond-between( "phone-small","tablet-small") {
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: center; 
-        gap: 35px;
+        gap: 30px;
     }
 
 
@@ -206,14 +205,41 @@
         }
     }
 
-
+    @include respond-between("phone-large","tablet-small") {
+        width: 220px;
+        height: 160px;
+        gap: 10px;
+        h4{
+            font-size: 20px;
+        }
+        p{
+            font-size: 15px;
+        }
+    }
+    @include respond-between("phone-medium","phone-large") {
+        width: 200px;
+        height: 140px;
+        gap: 10px;
+        h4{
+            font-size: 18px;
+        }
+        p{
+            font-size: 12px;
+        }
+    }
+    @include respond-between("phone-small","phone-medium") {
+        width: 180px;
+        height: 120px;
+        gap: 10px;
+        h4{
+            font-size: 15px;
+        }
+        p{
+            font-size: 10px;
+        }
+    }
 }
-.imgMenu {
-
-}
-.container__experience{
   
-}   
 .container__experience--texts {
     @include respond-between("tablet-small","tablet-medium") {
         gap: 10px;
@@ -230,9 +256,16 @@
         gap: 40px;
         padding-left: 30px !important;
     }
+    @include respond-between("phone-small","tablet-small") {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 .container__contacUs--elements{
-    
+    @include respond-between("phone-small","tablet-small") {
+        width: 100%;
+        align-content: center;
+    } 
 }
 .container__contacUs--img{
     @include respond-between("tablet-medium", "tablet-large") {
@@ -240,6 +273,9 @@
     }
     @include respond-between("tablet-small","tablet-medium") {
         width: 100%;
+    }
+    @include respond-between("phone-small","tablet-small") {
+        display: none;
     }
 }
 .container__contacUs--text{
@@ -255,33 +291,47 @@
     @include respond-between("tablet-small","tablet-medium") {
         font-size: 45px;
     }
+    @include respond-between("phone-small","tablet-small") {
+        font-size: 30px;
+    }
 }
 .contactUs__form{
-    @include respond-between("tablet-medium", "tablet-large") {
+    @include respond-between("tablet-small", "tablet-large") {
         width: 55%;
         padding: 0px;
         margin: 0px;
     }
-    @include respond-between("tablet-small","tablet-medium") {
-        width: 55%;
+    // @include respond-between("tablet-small","tablet-medium") {
+    //     width: 55%;
+    //     padding: 0px;
+    //     margin: 0px;
+    // }
+     @include respond-between("phone-small","tablet-small") {
+        width: 90%;
         padding: 0px;
         margin: 0px;
     }
-    @include respond-between("tablet-small","tablet-medium") {
-        width: 55%;
-        padding: 0px;
-        margin: 0px;
-     }
 }
 .form-container{
     @include respond-between("tablet-small","tablet-medium") {
         padding-bottom: 0px;
     }
+    .mb-3{
+        @include respond-between("phone-small","tablet-small") {
+            margin-bottom: 0px !important;
+        }
+    }
+}
+.form-footer{
+    @include respond-between("phone-small","phone-large") {
+        flex-direction: row;
+    }
 }
 .row_form{
-    @include respond-between("tablet-small","tablet-medium") {
+    @include respond-between("phone-small","tablet-medium") {
         flex-direction: column;
     }
+
 }
 .btn-submit{
     @include respond-between("tablet-small","tablet-medium") {
@@ -289,12 +339,7 @@
         font-size: 15px;
     }
 }
-.container__footer{
-    
-}
-.container__footer--img{
-    
-}
+
 .container__footer--p{
     @include respond-between("tablet-large", "laptop-small") {
         font-size: 15px
@@ -307,7 +352,9 @@
     }
 }
 .container__footer--socialMedia{
-    
+    @include respond-between("phone-small","tablet-small") {
+        flex-direction: column;
+    }
 }
 .socialMedia{
     @include respond-between("tablet-large", "laptop-small") {
@@ -331,18 +378,6 @@
         }
     }
 }
-.opacidad--experience {
-
-}
-
-.opacidad--home {
-
-}
-
-.opacidad--ourMision {
-
-}
-
 
 .title--OurMision {
     @include respond-between("laptop-small", "laptop-medium"){
@@ -366,6 +401,10 @@
     @include respond-between("tablet-small","tablet-medium") {
         font-size: 27px;
     }
+    @include respond-between("phone-small","tablet-small") {
+        font-size: 25px;
+        text-align: center;
+    }
 }
 .title--Principal {
     @include respond-between("laptop-small", "laptop-medium"){
@@ -380,6 +419,10 @@
     @include respond-between("tablet-small","tablet-medium") {
         font-size: 37px;
      }
+     @include respond-between("phone-small","tablet-small") {
+        font-size: 35px;
+        text-align: center;
+     }
 }
 
 .title--h3 {
@@ -392,6 +435,10 @@
     @include respond-between("tablet-small","tablet-medium") {
         font-size: 24px;
     }
+    @include respond-between("phone-small","tablet-small") {
+        font-size: 18px;   
+        text-align: center; 
+    }
 }
 
 .title--h4 {
@@ -403,6 +450,9 @@
     }
     @include respond-between("tablet-small","tablet-medium") {
         font-size: 22px;
+    }
+    @include respond-between("phone-small","tablet-small") {
+        font-size: 15px;
     }
 }
 .text--experience{
@@ -418,6 +468,10 @@
     @include respond-between("tablet-small","tablet-medium") {
         font-size: 24px;
     }
+    @include respond-between("phone-small","tablet-small") {
+        font-size: 20px;
+        text-align: center;
+    }
 }
 .title--basicCleaning{
     @include respond-between("laptop-small", "laptop-medium"){
@@ -432,6 +486,10 @@
     @include respond-between("tablet-small","tablet-medium") {
         font-size: 35px;
     }
+    @include respond-between("phone-small","tablet-small") {
+        font-size: 40px;
+        text-align: center;
+     }
 }
 .title--basicCleaning--h3{
     @include respond-between("laptop-small", "laptop-medium"){
@@ -446,6 +504,18 @@
     @include respond-between("tablet-small","tablet-medium") {
         font-size: 20px;
     }
+    @include respond-between("phone-large","tablet-small") {
+        font-size: 35px;
+        text-align: center;
+     }
+     @include respond-between("phone-medium","phone-large") {
+        font-size: 25px;
+        text-align: center;
+     }
+     @include respond-between("phone-small","phone-medium") {
+        font-size: 25px;
+        text-align: center;
+     }
     
 }
 .title--whyChooseUs{
@@ -461,17 +531,23 @@
     @include respond-between("tablet-small","tablet-medium") {
         font-size: 35px;
     }
+    @include respond-between("phone-small","tablet-small") {
+        font-size: 30px;
+    }
 }
 .title--whyChooseUs--h3{
     @include respond-between("tablet-large", "laptop-small") {
-        font-size: 20px
+        font-size: 22px
     }
-    @include respond-between("tablet-medium", "tablet-large") {
-        font-size: 15px;
+    @include respond-between("tablet-small", "tablet-large") {
+        font-size: 18px;
         
     }
-     @include respond-between("tablet-small","tablet-medium") {
+     @include respond-between("phone-large","tablet-small") {
         font-size: 15px;
+    }
+    @include respond-between("phone-small","phone-large") {
+        font-size: 12px;
     }
 }
 
@@ -488,18 +564,25 @@
     @include respond-between("tablet-small","tablet-medium") {
         font-size: 45px;
     }
+    @include respond-between("phone-small","tablet-small") {
+        font-size: 40px;
+    }
 }
 
 .container__basicCleaning{
     @include respond-between("tablet-large", "laptop-small") {
-       padding: 0px !important;
+       padding: 0px 10px !important;
     }
     @include respond-between("tablet-medium", "tablet-large") {
-       padding: 0px !important;
+       padding: 0px 10px !important;
      }
-     @include respond-between("tablet-small","tablet-medium") {
-        padding: 0% !important;
-    }
+
+    @include respond-between("phone-small","tablet-small") {
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+     }
 }
 .container__basicCleaning--text{  
     @include respond-between("tablet-small","tablet-medium") {
@@ -508,15 +591,23 @@
         right: 0px;
         margin-top: 34%;
      }  
+     @include respond-between("phone-small","tablet-small") {
+        width: 100%;
+     }
 }
 .basicCleaning--img{
     @include respond-between("tablet-large", "laptop-small") {
         width: 60%;
     }
-    @include respond-between("tablet-medium", "tablet-large") {
-       width: 65%;;
+    @include respond-between("tablet-small", "tablet-large") {
+       width: 75%;
      }
-     
+     @include respond-between("phone-small","tablet-small") {
+        width: 80%;
+      }
+      @include respond-between("phone-small","tablet-small") {
+        width: 100%;
+     }
 }
 .basicCleaning--svg{
     @include respond-between("tablet-large", "laptop-small") {
@@ -532,6 +623,54 @@
        bottom: 0px;
      }
 }
-.container_logo {
+.container__menu--bar{
+    @include respond-between("phone-small","tablet-large") {
+        background: $colorMenuInvertido;
+        padding: 10px;
+        border-radius: 0px 0px 50px 50px ;
+        position: absolute;
+        top: 119px;
+     }
+}
 
+.container__menu--btn{
+    @include respond-between("phone-small","tablet-large") {
+        margin: 20px;
+     } 
+}
+.container_logo{
+    @include respond-between("phone-small","tablet-large") {
+        width: 50%;
+        justify-content: flex-end;
+        left: 46%;
+        a{
+            width: 40%;
+        }
+     }
+}
+.container__footer--img {
+    @include respond-between("phone-small","phone-large") {
+        width: 181.602px;
+        margin: 35px;    
+     }
+}
+.container__footer--p{
+    @include respond-between("phone-small","phone-large") {
+        font-size: 10px; 
+     }
+}
+.container__whyChooseUs--texts{
+    @include respond-between("phone-small","phone-large") {
+        font-size: 10px; 
+     }
+}
+#basicCleaning{
+    @include respond-between("phone-small","phone-medium") {
+        @include container_img('../img/basic_cleaning_small.jpg'); 
+     }
+}
+main{
+    @include respond-between("none","phone-small") {
+       display: none;
+     }
 }

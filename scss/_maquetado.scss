@@ -16,10 +16,10 @@ html {
 
 
 #basicCleaning{
-//     background-color: #E5FFED;
-//     position: relative;
-//   overflow: hidden;
-  @include container_img('../img/basic_cleaning.jpg');  
+    // background-color: #E5FFED;
+    position: relative;
+  overflow: hidden;
+   @include container_img('../img/basic_cleaning.jpg');  
 
 }
 #whyChooseUscontactUs{

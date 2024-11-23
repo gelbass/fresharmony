@@ -296,7 +296,6 @@
   display: flex;
   flex-direction: row;
   height: 100vh;
-  // padding: 20px 10px !important;
   align-items: center;
   align-content: flex-end;
   flex-wrap: wrap;
@@ -321,7 +320,7 @@
   @include text(Montserrat, 30px, normal, 400, normal, $colorTextN);
 }
 .basicCleaning--img {
-  width: 50%;
+  width: 48%;
   flex-shrink: 0;
 }
 
@@ -338,6 +337,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 .container__cards {
   display: flex;
