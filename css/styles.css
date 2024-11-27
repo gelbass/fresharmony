@@ -877,12 +877,11 @@ html {
   }
 }
 
-@media (min-width: 600px) and (max-width: 768px) {
-  .opacidad--ourMision {
-    padding-left: 20px !important;
-  }
-}
-
+/* .opacidad--ourMision {
+    @include respond-between("tablet-small","tablet-medium") {
+        padding-left: 20px !important;
+    }
+} */
 @media (min-width: 991px) and (max-width: 1200px) {
   .container__testimonials--Title {
     font-size: 60px;
@@ -1488,15 +1487,13 @@ html {
   }
 }
 
-@media (min-width: 991px) and (max-width: 1200px) {
-  .container__basicCleaning {
-    padding: 0px 10px !important;
+.container__basicCleaning {
+  /* @include respond-between("tablet-large", "laptop-small") {
+     padding: 0px 10px !important;
   }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .container__basicCleaning {
-    padding: 0px 10px !important;
-  }
+  @include respond-between("tablet-medium", "tablet-large") {
+     padding: 0px 10px !important;
+   } */
 }
 @media (min-width: 320px) and (max-width: 600px) {
   .container__basicCleaning {
@@ -1507,6 +1504,14 @@ html {
   }
 }
 
+.container__basicCleaning--text {
+  /*    @include respond-between("tablet-medium","tablet-large") {
+
+         position: absolute;
+         right: 0px;
+         margin-top: 18%;
+      }  */
+}
 @media (min-width: 600px) and (max-width: 768px) {
   .container__basicCleaning--text {
     position: absolute;
@@ -1516,26 +1521,27 @@ html {
 }
 @media (min-width: 320px) and (max-width: 600px) {
   .container__basicCleaning--text {
+    position: relative;
     width: 100%;
   }
 }
 
-@media (min-width: 991px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1200px) {
   .basicCleaning--img {
     width: 60%;
   }
 }
-@media (min-width: 600px) and (max-width: 991px) {
+@media (min-width: 600px) and (max-width: 768px) {
   .basicCleaning--img {
     width: 75%;
   }
 }
-@media (min-width: 320px) and (max-width: 600px) {
+@media (min-width: 414px) and (max-width: 600px) {
   .basicCleaning--img {
     width: 80%;
   }
 }
-@media (min-width: 320px) and (max-width: 600px) {
+@media (min-width: 320px) and (max-width: 414px) {
   .basicCleaning--img {
     width: 100%;
   }
