@@ -97,6 +97,7 @@ falta agregar apartir de aqui
   width: 100vw; /* 100% del ancho de la ventana */
   height: 100vh; /* 100% de la altura de la ventana */
   object-fit: fill;
+  zoom: 0%;
 }
 
 .container__home {
@@ -406,13 +407,13 @@ falta agregar apartir de aqui
   align-items: center;
   align-content: flex-end;
   flex-wrap: wrap;
+  padding-top: 80px;
 }
 
 .container__basicCleaning--text {
   display: flex;
   flex-direction: column;
   width: 35%;
-  margin-top: 12%;
   align-self: baseline;
 }
 
@@ -457,7 +458,7 @@ falta agregar apartir de aqui
 }
 
 .basicCleaning--img {
-  width: 48%;
+  width: 52%;
   flex-shrink: 0;
 }
 
@@ -481,7 +482,7 @@ falta agregar apartir de aqui
 .container__cards {
   display: flex;
   align-items: center;
-  gap: 90px;
+  gap: 40px;
   text-align: center;
   align-content: center;
 }
@@ -1360,24 +1361,24 @@ html {
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .title--basicCleaning {
-    font-size: 40px;
+    font-size: 38px;
   }
 }
 @media (min-width: 600px) and (max-width: 768px) {
   .title--basicCleaning {
-    font-size: 35px;
+    font-size: 31px;
   }
 }
 @media (min-width: 320px) and (max-width: 600px) {
   .title--basicCleaning {
-    font-size: 40px;
+    font-size: 45px;
     text-align: center;
   }
 }
 
 @media (min-width: 1200px) and (max-width: 1366px) {
   .title--basicCleaning--h3 {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 @media (min-width: 991px) and (max-width: 1200px) {
@@ -1397,7 +1398,7 @@ html {
 }
 @media (min-width: 414px) and (max-width: 600px) {
   .title--basicCleaning--h3 {
-    font-size: 35px;
+    font-size: 30px;
     text-align: center;
   }
 }
@@ -1516,7 +1517,8 @@ html {
   .container__basicCleaning--text {
     position: absolute;
     right: 0px;
-    margin-top: 34%;
+    margin-top: 15%;
+    margin-right: 5%;
   }
 }
 @media (min-width: 320px) and (max-width: 600px) {
@@ -1526,9 +1528,14 @@ html {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 991px) and (max-width: 1200px) {
   .basicCleaning--img {
     width: 60%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .basicCleaning--img {
+    width: 65%;
   }
 }
 @media (min-width: 600px) and (max-width: 768px) {
@@ -1538,30 +1545,12 @@ html {
 }
 @media (min-width: 414px) and (max-width: 600px) {
   .basicCleaning--img {
-    width: 80%;
+    width: 95%;
   }
 }
 @media (min-width: 320px) and (max-width: 414px) {
   .basicCleaning--img {
     width: 100%;
-  }
-}
-
-@media (min-width: 991px) and (max-width: 1200px) {
-  .basicCleaning--svg {
-    bottom: 0px;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .basicCleaning--svg {
-    width: 121%;
-    bottom: 0px;
-  }
-}
-@media (min-width: 600px) and (max-width: 768px) {
-  .basicCleaning--svg {
-    width: 121%;
-    bottom: 0px;
   }
 }
 
@@ -1583,12 +1572,10 @@ html {
 
 @media (min-width: 320px) and (max-width: 991px) {
   .container_logo {
-    width: 50%;
-    justify-content: flex-end;
-    left: 46%;
+    justify-content: flex-start;
   }
   .container_logo a {
-    width: 40%;
+    width: 20%;
   }
 }
 
@@ -1616,6 +1603,64 @@ html {
     background-image: url("../img/basic_cleaning_small.jpg");
     background-size: cover;
     background-position: center;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 375px) {
+  .video-background video {
+    width: auto;
+    height: auto;
+    zoom: 32%;
+    left: -181%;
+    top: 17%;
+  }
+}
+@media (min-width: 375px) and (max-width: 414px) {
+  .video-background video {
+    width: auto;
+    height: auto;
+    zoom: 25%;
+    left: -120%;
+    top: 18%;
+  }
+}
+@media (min-width: 414px) and (max-width: 600px) {
+  .video-background video {
+    width: auto;
+    height: auto;
+    zoom: 25%;
+    left: -60%;
+    top: 18%;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .video-background video {
+    width: auto;
+    height: auto;
+    zoom: 25%;
+    left: -14%;
+    top: 18%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .video-background video {
+    width: auto;
+    height: auto;
+    zoom: 27%;
+    left: 0%;
+    top: 18%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 991px) {
+  .container__menu--icon {
+    flex-direction: row-reverse !important;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 991px) {
+  .imgMenu {
+    bottom: 0px;
   }
 }
 

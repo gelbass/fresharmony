@@ -481,19 +481,19 @@
         font-size: 50px
     }
     @include respond-between("tablet-medium", "tablet-large") {
-        font-size: 40px
+        font-size: 38px
     }
     @include respond-between("tablet-small","tablet-medium") {
-        font-size: 35px;
+        font-size: 31px;
     }
     @include respond-between("phone-small","tablet-small") {
-        font-size: 40px;
+        font-size: 45px;
         text-align: center;
      }
 }
 .title--basicCleaning--h3{
     @include respond-between("laptop-small", "laptop-medium"){
-        font-size: 40px
+        font-size: 30px
     }
     @include respond-between("tablet-large", "laptop-small") {
         font-size: 30px
@@ -505,7 +505,7 @@
         font-size: 20px;
     }
     @include respond-between("phone-large","tablet-small") {
-        font-size: 35px;
+        font-size: 30px;
         text-align: center;
      }
      @include respond-between("phone-medium","phone-large") {
@@ -595,7 +595,8 @@
     
         position: absolute;
         right: 0px;
-        margin-top: 34%;
+        margin-top: 15%;
+        margin-right: 5%;
      }  
      @include respond-between("phone-small","tablet-small") {
         position: relative;
@@ -603,33 +604,23 @@
      }
 }
 .basicCleaning--img{
-    @include respond-between("tablet-medium", "laptop-small") {
+    @include respond-between("tablet-large", "laptop-small") {
         width: 60%;
+    }
+    @include respond-between("tablet-medium","tablet-large") {
+        width: 65%;
     }
     @include respond-between("tablet-small","tablet-medium") {
        width: 75%;
     }
      @include respond-between("phone-large","tablet-small") {
-        width: 80%;
+        width: 95%;
       }
       @include respond-between("phone-small","phone-large") {
         width: 100%;
      }
 }
-.basicCleaning--svg{
-    @include respond-between("tablet-large", "laptop-small") {
-        //width: 60%;
-       bottom: 0px;
-    }
-    @include respond-between("tablet-medium", "tablet-large") {
-       width: 121%;
-       bottom: 0px;
-     }
-     @include respond-between("tablet-small","tablet-medium") {
-        width: 121%;
-       bottom: 0px;
-     }
-}
+
 .container__menu--bar{
     @include respond-between("phone-small","tablet-large") {
         background: $colorMenuInvertido;
@@ -647,11 +638,10 @@
 }
 .container_logo{
     @include respond-between("phone-small","tablet-large") {
-        width: 50%;
-        justify-content: flex-end;
-        left: 46%;
+        //width: 50%;
+        justify-content: flex-start;
         a{
-            width: 40%;
+            width: 20%;
         }
      }
 }
@@ -676,8 +666,62 @@
         @include container_img('../img/basic_cleaning_small.jpg'); 
      }
 }
+
+
+.video-background {    
+    video {
+        @include respond-between("phone-small","phone-medium") {
+            width: auto;
+            height:auto;
+            zoom: 32%;
+        left: -181%;
+        top: 17%;
+        }
+        @include respond-between("phone-medium","phone-large") {
+            width: auto;
+            height: auto;
+        zoom: 25%;
+        left: -120%;
+        top: 18%;
+        }
+        @include respond-between("phone-large","tablet-small") {
+            width: auto;
+            height: auto;
+            zoom: 25%;
+            left: -60%;
+            top: 18%;
+        }
+        @include respond-between("tablet-small","tablet-medium") {
+            width: auto;
+            height: auto;
+            zoom: 25%;
+            left: -14%;
+            top: 18%;
+        }
+        @include respond-between("tablet-medium","tablet-large") {
+            width: auto;
+            height: auto;
+            zoom: 27%;
+            left: 0%;
+            top: 18%;
+        }
+
+    }
+  }
+.container__menu--icon{
+    @include respond-between("phone-small","tablet-large") {
+        flex-direction: row-reverse !important;
+      }
+}
+.imgMenu{
+    @include respond-between("phone-small","tablet-large") {
+        bottom: 0px;
+      }
+}
+
 main{
     @include respond-between("none","phone-small") {
        display: none;
      }
 }
+

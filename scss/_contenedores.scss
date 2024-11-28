@@ -74,6 +74,7 @@
     width: 100vw; /* 100% del ancho de la ventana */
     height: 100vh; /* 100% de la altura de la ventana */
     object-fit: fill; 
+    zoom: 0%;
   }
 }
 
@@ -299,12 +300,14 @@
   align-items: center;
   align-content: flex-end;
   flex-wrap: wrap;
+  padding-top: 80px;
 }
+
 .container__basicCleaning--text {
   display: flex;
   flex-direction: column;
   width: 35%;
-  margin-top: 12%;
+  //margin-top: 12%;
   align-self: baseline;
 }
 .title--basicCleaning {
@@ -320,7 +323,7 @@
   @include text(Montserrat, 30px, normal, 400, normal, $colorTextN);
 }
 .basicCleaning--img {
-  width: 48%;
+  width: 52%;
   flex-shrink: 0;
 }
 
@@ -342,7 +345,7 @@
 .container__cards {
   display: flex;
   align-items: center;
-  gap: 90px;
+  gap: 40px;
   text-align: center;
   align-content: center;
 }
