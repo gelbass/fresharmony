@@ -8,19 +8,10 @@
         margin-left: 30px;
         margin-right: 30px;
     }
+    @include respond-between("phone-small", "phone-large") {
+       width: 224px;
+    }
 
-    // @include respond-between("tablet-large", "laptop-small") {
-    //     margin-left: 30px;
-    //     margin-right: 30px;
-    // }
-    // @include respond-between("tablet-medium", "tablet-large") {
-    //     margin-left: 30px;
-    //     margin-right: 30px;
-    // }
-    // @include respond-between("tablet-small","tablet-medium") {
-    //     margin-left: 30px;
-    //     margin-right: 30px;
-    //  }
 }
 
 .carousel-buttons {

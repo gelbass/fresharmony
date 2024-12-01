@@ -124,7 +124,7 @@ startAutoSlide();
       breakpoints: {     // Configuración responsive
         //1024: { perPage: 3}, // Mostrar 2 tarjetas en pantallas medianas
         1243: { perPage: 2 },  // Mostrar 1 tarjeta en pantallas pequeñas
-        600: { perPage: 1 }
+        748: { perPage: 1 }
       },
       gap: '5px',       // Espacio entre tarjetas
       pagination: false, // Deshabilitar la paginación

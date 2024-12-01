@@ -373,10 +373,10 @@ falta agregar apartir de aqui
   fill: none !important;
 }
 .splide__arrow .splide__arrow--next {
-  right: 0px;
+  right: 0em !important;
 }
 .splide__arrow .splide__arrow--prev {
-  left: 0px;
+  left: 0em !important;
 }
 
 .container__testimonials {
@@ -819,6 +819,11 @@ html {
   .card--services {
     margin-left: 30px;
     margin-right: 30px;
+  }
+}
+@media (min-width: 320px) and (max-width: 414px) {
+  .card--services {
+    width: 224px;
   }
 }
 
