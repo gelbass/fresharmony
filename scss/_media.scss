@@ -668,7 +668,7 @@
 }
 
 
-.video-background {    
+/* .video-background {    
     video {
         @include respond-between("phone-small","phone-medium") {
             width: auto;
@@ -707,7 +707,8 @@
         }
 
     }
-  }
+  } */
+
 .container__menu--icon{
     @include respond-between("phone-small","tablet-large") {
         flex-direction: row-reverse !important;

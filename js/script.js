@@ -46,7 +46,7 @@ window.onload = function() {
   window.addEventListener('scroll', checkPosition);
 };
 
-
+/* 
 
 // Variables para manejar el carrusel
 const wrapper = document.querySelector('.carousel-wrapper');
@@ -113,3 +113,24 @@ window.addEventListener('resize', () => {
 // Inicialización
 updateCarousel();
 startAutoSlide();
+ */
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var splide = new Splide('.splide', {
+      type: 'loop',      // Carrusel cíclico
+      perPage: 3,        // Mostrar 3 tarjetas por página
+      perMove: 1,        // Mover 1 tarjeta por vez
+      breakpoints: {     // Configuración responsive
+        //1024: { perPage: 3}, // Mostrar 2 tarjetas en pantallas medianas
+        1243: { perPage: 2 },  // Mostrar 1 tarjeta en pantallas pequeñas
+        600: { perPage: 1 }
+      },
+      gap: '5px',       // Espacio entre tarjetas
+      pagination: false, // Deshabilitar la paginación
+      //arrows: true,      // Mostrar flechas de navegación
+    });
+
+    splide.mount();
+  });
+
