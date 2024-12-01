@@ -134,3 +134,17 @@ startAutoSlide();
     splide.mount();
   });
 
+  const cards = document.querySelectorAll('.card--services');
+
+cards.forEach(card => {
+  card.addEventListener('touchstart', () => {
+    card.style.filter = 'grayscale(0%)';
+  });
+
+  card.addEventListener('touchend', () => {
+    setTimeout(() => {
+      card.style.filter = 'grayscale(100%)';
+    }, 200); // Opcional, para un efecto breve después de soltar
+  });
+});
+

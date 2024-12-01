@@ -13,6 +13,17 @@
     }
 
 }
+.card--services--title{
+    @include respond-between("phone-small", "phone-large") {
+       font-size: 18px;
+     }
+}
+
+.card--services--text{
+    @include respond-between("phone-small", "phone-large") {
+       font-size: 13px;
+     }
+}
 
 .carousel-buttons {
     @include respond-between("phone-small", "tablet-large") {

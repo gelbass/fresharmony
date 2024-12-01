@@ -827,6 +827,18 @@ html {
   }
 }
 
+@media (min-width: 320px) and (max-width: 414px) {
+  .card--services--title {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 414px) {
+  .card--services--text {
+    font-size: 13px;
+  }
+}
+
 @media (min-width: 320px) and (max-width: 991px) {
   .carousel-buttons {
     width: 100%;
