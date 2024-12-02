@@ -883,15 +883,17 @@ html {
     padding-left: 50px !important;
   }
 }
-@media (min-width: 600px) and (max-width: 768px) {
+@media (min-width: 600px) and (max-width: 991px) {
   .container__home {
     padding-left: 20px !important;
+    padding-bottom: 200px !important;
   }
 }
 @media (min-width: 320px) and (max-width: 600px) {
   .container__home {
     padding-left: 10px !important;
     align-items: center !important;
+    padding-bottom: 200px;
   }
   .container__home div {
     text-align: center;
@@ -1631,6 +1633,7 @@ html {
 
 @media (min-width: 320px) and (max-width: 991px) {
   .container_logo {
+    width: 570px;
     justify-content: flex-start;
   }
   .container_logo a {
@@ -1708,6 +1711,7 @@ html {
 @media (min-width: 320px) and (max-width: 991px) {
   .container__menu--icon {
     flex-direction: row-reverse !important;
+    z-index: 1;
   }
 }
 

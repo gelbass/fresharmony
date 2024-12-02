@@ -62,13 +62,17 @@
 .container__home {
     @include respond-between("tablet-medium", "tablet-large") {
         padding-left: 50px !important;
+        
+        
     }
-    @include respond-between("tablet-small","tablet-medium") {
+    @include respond-between("tablet-small","tablet-large") {
         padding-left: 20px !important;
+        padding-bottom: 200px !important;
     }
     @include respond-between("phone-small","tablet-small") {
         padding-left: 10px !important;
         align-items: center !important;
+        padding-bottom: 200px;
         div{
             text-align: center;
             align-items: center !important;
@@ -639,13 +643,15 @@
      } 
 }
 .container_logo{
+    
     @include respond-between("phone-small","tablet-large") {
-        //width: 50%;
+        width: 570px;
         justify-content: flex-start;
         a{
             width: 20%;
         }
      }
+
 }
 .container__footer--img {
     @include respond-between("phone-small","phone-large") {
@@ -714,6 +720,7 @@
 .container__menu--icon{
     @include respond-between("phone-small","tablet-large") {
         flex-direction: row-reverse !important;
+        z-index: 1;
       }
 }
 .imgMenu{
