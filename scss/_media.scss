@@ -480,6 +480,9 @@
     }
 }
 .title--basicCleaning{
+    @include respond-between("desktop-small", "desktop-xxl") {
+        font-size: 70px
+    }
     @include respond-between("laptop-small", "laptop-medium"){
         font-size: 60px
     }
@@ -498,6 +501,9 @@
      }
 }
 .title--basicCleaning--h3{
+    @include respond-between("desktop-small", "desktop-xxl") {
+        font-size: 40px
+    }
     @include respond-between("laptop-small", "laptop-medium"){
         font-size: 30px
     }
@@ -610,6 +616,9 @@
      }
 }
 .basicCleaning--img{
+    @include respond-between("desktop-small", "desktop-xxl") {
+        width: 45%;
+    }
     @include respond-between("tablet-large", "laptop-small") {
         width: 60%;
     }

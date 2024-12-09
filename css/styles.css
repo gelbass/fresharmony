@@ -1410,6 +1410,11 @@ html {
   }
 }
 
+@media (min-width: 1440px) and (max-width: 3840px) {
+  .title--basicCleaning {
+    font-size: 70px;
+  }
+}
 @media (min-width: 1200px) and (max-width: 1366px) {
   .title--basicCleaning {
     font-size: 60px;
@@ -1437,6 +1442,11 @@ html {
   }
 }
 
+@media (min-width: 1440px) and (max-width: 3840px) {
+  .title--basicCleaning--h3 {
+    font-size: 40px;
+  }
+}
 @media (min-width: 1200px) and (max-width: 1366px) {
   .title--basicCleaning--h3 {
     font-size: 30px;
@@ -1589,6 +1599,11 @@ html {
   }
 }
 
+@media (min-width: 1440px) and (max-width: 3840px) {
+  .basicCleaning--img {
+    width: 45%;
+  }
+}
 @media (min-width: 991px) and (max-width: 1200px) {
   .basicCleaning--img {
     width: 60%;
