@@ -55,8 +55,8 @@ const btn = document.getElementById("sendEmail");
 document.getElementById("formContact").addEventListener("submit", function(event) {
   event.preventDefault();
 
-  const serviceID = "service_rh6fyh3"; //Remplazar 
-  const templateID = "template_jqpykq9"; //Remplazar 
+  const serviceID = "service_gm1oo3k"; //Remplazar 
+  const templateID = "template_khad686"; //Remplazar 
 
   emailjs.sendForm(serviceID, templateID, this).then(
     () => {
