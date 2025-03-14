@@ -418,7 +418,7 @@ falta agregar apartir de aqui
 }
 
 .carousel--text {
-  font-size: 55px;
+  font-size: 48px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
@@ -778,6 +778,12 @@ falta agregar apartir de aqui
 .socialMedia:hover svg {
   fill: #000;
 }
+.socialMedia .carousel-control-next {
+  width: 50px !important;
+}
+.socialMedia .carousel-control-prev {
+  width: 50% !important;
+}
 
 * {
   margin: 0;
@@ -967,22 +973,22 @@ html {
 
 @media (min-width: 991px) and (max-width: 1200px) {
   .carousel--text {
-    font-size: 45px;
+    font-size: 44px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .carousel--text {
-    font-size: 40px;
+    font-size: 38px;
   }
 }
 @media (min-width: 600px) and (max-width: 768px) {
   .carousel--text {
-    font-size: 35px;
+    font-size: 32px;
   }
 }
 @media (min-width: 320px) and (max-width: 600px) {
   .carousel--text {
-    font-size: 30px;
+    font-size: 27px;
   }
 }
 

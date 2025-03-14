@@ -131,16 +131,16 @@
 }
 .carousel--text{
     @include respond-between("tablet-large", "laptop-small") {
-        font-size: 45px;
+        font-size: 44px;
     }
     @include respond-between("tablet-medium","tablet-large") {
-        font-size: 40px;
+        font-size: 35px;
      }
     @include respond-between("tablet-small","tablet-medium") {
-       font-size: 35px;
+       font-size: 28px;
     }
     @include respond-between("phone-small","tablet-small") {
-       font-size: 30px;
+       font-size: 20px;
      }
 }
 .container__whyChooseUs{
